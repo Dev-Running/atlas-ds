@@ -1,0 +1,26 @@
+info @storybook/react v6.5.14
+info 
+info => Cleaning outputDir: /tmp/chromatic--211964-q2iBgTZQqoDR
+info => Loading presets
+info => Loading custom manager config
+info => Compiling manager..
+(node:212069) ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+info => Loading custom manager config
+/home/laurentino/Documents/DEV RUNNING/atlas/node_modules/webpack/lib/javascript/JavascriptModulesPlugin.js:143
+			throw new TypeError(
+			^
+
+TypeError: The 'compilation' argument must be an instance of Compilation
+    at JavascriptModulesPlugin.getCompilationHooks (/home/laurentino/Documents/DEV RUNNING/atlas/node_modules/webpack/lib/javascript/JavascriptModulesPlugin.js:143:10)
+    at /home/laurentino/Documents/DEV RUNNING/atlas/node_modules/terser-webpack-plugin/dist/index.js:566:67
+    at SyncHook.eval [as call] (eval at create (/home/laurentino/Documents/DEV RUNNING/atlas/node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:85:1)
+    at SyncHook.lazyCompileHook (/home/laurentino/Documents/DEV RUNNING/atlas/node_modules/tapable/lib/Hook.js:154:20)
+    at Compiler.newCompilation (/home/laurentino/Documents/DEV RUNNING/atlas/node_modules/@storybook/manager-webpack4/node_modules/webpack/lib/Compiler.js:631:26)
+    at /home/laurentino/Documents/DEV RUNNING/atlas/node_modules/@storybook/manager-webpack4/node_modules/webpack/lib/Compiler.js:667:29
+    at AsyncSeriesHook.eval [as callAsync] (eval at create (/home/laurentino/Documents/DEV RUNNING/atlas/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:6:1)
+    at AsyncSeriesHook.lazyCompileHook (/home/laurentino/Documents/DEV RUNNING/atlas/node_modules/tapable/lib/Hook.js:154:20)
+    at Compiler.compile (/home/laurentino/Documents/DEV RUNNING/atlas/node_modules/@storybook/manager-webpack4/node_modules/webpack/lib/Compiler.js:662:28)
+    at /home/laurentino/Documents/DEV RUNNING/atlas/node_modules/@storybook/manager-webpack4/node_modules/webpack/lib/Compiler.js:321:11
+
+Node.js v18.12.1
