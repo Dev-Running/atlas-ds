@@ -26,11 +26,10 @@ module.exports = {
       // },
     });
   },
-  typescript: {
-    check: false,
-    checkOptions: {},
-    reactDocgen: false,
-   
-  },
+  // typescript: {
+  //   check: false,
+  //   checkOptions: {},
+  //   reactDocgen: false,
+  // },
 }
 
