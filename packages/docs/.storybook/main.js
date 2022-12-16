@@ -16,28 +16,15 @@ module.exports = {
   core: {
     builder: "@storybook/builder-webpack5",
      },
-  // async viteFinal(config, { configType }) { 
-  //   return mergeConfig(config, {
-  // //     // Use the same "resolve" configuration as your app
-  //     resolve: (await import('../vite.config.js')).default.resolve,
-  // //     // Add dependencies to pre-optimizatio
-  // //     // optimizeDeps: {
-  // //     //   include: ['storybook-dark-mode'],
-  //     // },
-  //   });
-  // },
-  webpackFinal: async (config, { configType }) => {
-    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-    // You can change the configuration based on that.
-    // 'PRODUCTION' is used when building the static version of storybook.
-    if (configType === 'PRODUCTION') { 
-      config.base = '/atlas-ds/';
-    }
-    // Make whatever fine-grained changes you need
-   
-
-    // Return the altered config
-    return config;
+  async viteFinal(config, { configType }) { 
+    return mergeConfig(config, {
+  //     // Use the same "resolve" configuration as your app
+      resolve: (await import('../vite.config.js')).default.resolve,
+  //     // Add dependencies to pre-optimizatio
+  //     // optimizeDeps: {
+  //     //   include: ['storybook-dark-mode'],
+      // },
+    });
   },
   features: {
     storyStoreV7: true,
