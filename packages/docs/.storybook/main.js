@@ -16,16 +16,16 @@ module.exports = {
   core: {
     builder: "@storybook/builder-vite",
      },
-  async viteFinal(config, { configType }) { 
-    return mergeConfig(config, {
-      // Use the same "resolve" configuration as your app
-      resolve: (await import('../vite.config.js')).default.resolve,
-      // Add dependencies to pre-optimization
-      // optimizeDeps: {
-      //   include: ['storybook-dark-mode'],
-      // },
-    });
-  },
+  // async viteFinal(config, { configType }) { 
+  //   return mergeConfig(config, {
+  //     // Use the same "resolve" configuration as your app
+  //     resolve: (await import('../vite.config.js')).default.resolve,
+  //     // Add dependencies to pre-optimization
+  //     // optimizeDeps: {
+  //     //   include: ['storybook-dark-mode'],
+  //     // },
+  //   });
+  // },
   features: {
     storyStoreV7: true,
   }
