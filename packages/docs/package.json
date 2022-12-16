@@ -9,11 +9,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts --openssl-legacy-provider start",
     "dev": "start-storybook -p 6006",
     "build": "build-storybook",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook build-storybook",
     "lint": "eslint src/**/*.ts* --fix",
     "deploy-storybook": "storybook-to-ghpages",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
@@ -49,6 +48,8 @@
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-addons-pure-render-mixin": "^15.6.3",
+    "react-docgen": "^6.0.0-alpha.4",
+    "react-docgen-typescript": "^2.2.2",
     "react-dom": "^18.2.0"
   },
   "bugs": {
