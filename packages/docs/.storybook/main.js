@@ -14,7 +14,7 @@ module.exports = {
   ],
   framework: "@storybook/react",
   core: {
-    builder: "@storybook/builder-vite",
+    builder: "@storybook/builder-webpack5",
      },
   async viteFinal(config, { configType }) { 
     return mergeConfig(config, {
@@ -31,8 +31,19 @@ module.exports = {
   },
   typescript: {
     check: false,
-    checkOptions: {},
+    checkOptions: {
+
+    },
     reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: (prop) => {
+        if (prop.parent) {
+          return !prop.parent.fileName.includes('node_modules');
+        }
+        return true;
+      }
+    }
   },
 }
 
