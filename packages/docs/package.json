@@ -16,7 +16,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint src/**/*.ts* --fix",
-    "chromatic": "npx chromatic --project-token 3908c2fc11ec"
+    "deploy-storybook": "storybook-to-ghpages",
+    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "author": {
     "name": "Lucas Laurentino"
@@ -31,6 +32,7 @@
     "@storybook/addon-links": "^6.5.14",
     "@storybook/addons": "^6.5.14",
     "@storybook/react": "^6.5.14",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "@vitejs/plugin-react": "^3.0.0",
     "babel-loader": "^8.3.0",

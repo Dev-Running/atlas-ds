@@ -27,7 +27,10 @@ module.exports = {
     });
   },
   typescript: {
+    check: false,
+    checkOptions: {},
     reactDocgen: false,
-  }
+   
+  },
 }
 

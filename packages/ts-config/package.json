@@ -2,7 +2,6 @@
   "name": "@devrunning/ts-config",
   "version": "1.0.0",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "description": "TypeScript configuration for DevRunning"
-  
 }
