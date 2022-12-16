@@ -26,6 +26,9 @@ module.exports = {
       // },
     });
   },
+  features: {
+    storyStoreV7: true,
+  }
   // typescript: {
   //   check: false,
   //   checkOptions: {},
