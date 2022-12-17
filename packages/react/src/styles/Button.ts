@@ -9,7 +9,6 @@ export const buttonCSS = css({
   justifyContent: 'center',
   margin: 0,
   cursor: 'pointer',
-  // height: '45px',
   flex: 'none',
   order: 1,
   flexGrow: 0,
@@ -56,7 +55,6 @@ export const buttonCSS = css({
         position: 'relative',
         backgroundImage: 'linear-gradient(90deg, $dark 0%, $dark 100%)',
         borderRadius: '3px',
-        width: 'auto',
         backgroundClip: 'border-box',
         // borderImageWidth: '2px',
         borderWidth: '2px',
@@ -86,9 +84,16 @@ export const buttonCSS = css({
         padding: '0.688rem 1.25rem',
       },
       lg: {
-        padding: '0.75rem 1.769rem',
-        textTransform: 'uppercase',
+        // padding: '0.75rem 1.769rem',
+        minWidth: '12.25rem',
+        minHeight: '2.8125rem',
+        maxWidth: '12.25rem',
       },
+    },
+    uppercase: {
+      true: {
+        textTransform: 'uppercase',    
+      }
     },
     weight: {
       light: {

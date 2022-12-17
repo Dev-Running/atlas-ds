@@ -14,8 +14,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook build-storybook",
     "lint": "eslint src/**/*.ts* --fix",
-    "deploy-storybook": "storybook-to-ghpages",
-    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "author": {
     "name": "Lucas Laurentino"

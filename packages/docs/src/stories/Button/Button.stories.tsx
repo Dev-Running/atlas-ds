@@ -9,11 +9,20 @@ export default {
     children: {
       control: 'text',
       description: 'The content of the button',
-      type: 'string',
+      type: 'string', 
       defaultValue: {
         summary: 'Empty',
         detail: 'Insert a text',
       },
+    },
+    uppercase: {
+      description: 'If true, the text will be uppercase',
+      type: 'boolean',
+      defaultValue: {
+        summary: 'false',
+        detail:'true | false'
+      },
+      control: 'boolean',
     },
     intent: {
       options: ['primary', 'light', 'outlinedGradientHomeStart'],
