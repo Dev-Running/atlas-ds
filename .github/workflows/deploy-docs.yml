@@ -1,4 +1,4 @@
-name: Deploy docas
+name: Deploy Docs with Storybook
 on:
   push:
     branches:
@@ -20,7 +20,7 @@ jobs:
 
       - run: yarn run build
 
-      - name: Deploy storybook
+      - name: Deploy Storybook
         working-directory: ./packages/docs
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
