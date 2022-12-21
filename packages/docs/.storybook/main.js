@@ -14,36 +14,39 @@ module.exports = {
   ],
   framework: "@storybook/react",
   core: {
-    builder: "@storybook/builder-webpack5",
+    builder: "@storybook/builder-vite",
      },
   async viteFinal(config, { configType }) { 
     return mergeConfig(config, {
   //     // Use the same "resolve" configuration as your app
       resolve: (await import('../vite.config.js')).default.resolve,
   //     // Add dependencies to pre-optimizatio
-  //     // optimizeDeps: {
-  //     //   include: ['storybook-dark-mode'],
-      // },
+      optimizeDeps: {
+        include: [ "@storybook/addon-links",
+        "@storybook/addon-essentials",
+        "@storybook/addon-interactions",
+        '@storybook/addon-a11y',
+        'storybook-addon-designs'],
+      },
     });
   },
   features: {
     storyStoreV7: true,
   },
-  typescript: {
-    check: false,
-    checkOptions: {
-
-    },
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) => {
-        if (prop.parent) {
-          return !prop.parent.fileName.includes('node_modules');
-        }
-        return true;
-      }
-    }
-  },
+  // typescript: {
+  //   check: false,
+  //   checkOptions: {
+  //   },
+  //   reactDocgen: 'react-docgen-typescript',
+  //   reactDocgenTypescriptOptions: {
+  //     shouldExtractLiteralValuesFromEnum: true,
+  //     propFilter: (prop) => {
+  //       if (prop.parent) {
+  //         return !prop.parent.fileName.includes('node_modules');
+  //       }
+  //       return true;
+  //     }
+  //   }
+  // },
 }
 
