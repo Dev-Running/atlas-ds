@@ -14,7 +14,8 @@ module.exports = {
   ],
   framework: "@storybook/react",
   core: {
-    builder: "@storybook/builder-vite",
+    // builder: "@storybook/builder-vite",
+    builder: "@storybook/builder-webpack5",
      },
   async viteFinal(config, { configType }) { 
     return mergeConfig(config, {

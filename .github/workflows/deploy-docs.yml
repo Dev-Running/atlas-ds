@@ -18,7 +18,7 @@ jobs:
 
       - run: yarn
 
-      - run: yarn run build
+      - run: yarn build
 
       - name: Deploy Storybook
         working-directory: ./packages/docs
